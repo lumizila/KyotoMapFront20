@@ -1,145 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kyoto Sightseeing Map</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-	<link rel="stylesheet" href="style.css">
-	<style>
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	
-	#map
-	{
-		height: 1200px;
-		width: 100%;
-	}
-	</style>
-</head>
-<body>
-<div class="jumbotron jumbotron-fluid" style="background-image: url(images/banner.png); background-size: 100% 100%; margin-bottom: auto; margin-left: -10px;">
-</div>
-<div class="wrapper">
-
- <nav id="sidebar" style="background-image: url(images/menu-bg.png);">	
-  	 <ul class="lisst-unstyled components">
-	 	<li class="active">
- 	 		<a href="#categoriesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Categories</a>
- 	 	  	<ul class="collapse list-unstyled" id="categoriesSubmenu" style="background-image: url(images/menu-bg.png);">
-			<label class="container">
-				<input type="checkbox"> Nature 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Culture 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Historical 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Temples 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Architecture 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Amusement 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Sport 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Food/Restaurant 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Security 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Transport 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Shops 
-				<span class="checkmark"></span>
-			</label>
-		  </li>
-  	 </ul>
- 	 	<li>
- 	 		<a href="#">List</a>
-		</li> 		
-		<li class="active">
-			<a href="#routeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Route</a>
-			<ul class="collapse list-unstyled" id="routeSubmenu" >
-				<div class="form-group">
-					<label for="frm">From:</label>
-					<input type="text" class="form-control" id="frm" size="5px">
-				  </div>
-				  <div class="form-group">
-					<label for="to">To</label>
-					<input type="to" class="form-control" id="to">
-				  </div>
-				  <button type="button" class="btn">Search</button>
-			</ul>
-  		</li>		  
-	 	</ul>
- 	 	</li>
-	 </ul>
- </nav>
-
-
-<div id="content">
-	
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	   	<div class="container-fluid">
-  		<button type="button" id="sidebarCollapse" class="btn  btn-info" style="background:rgb(241, 186, 168); margin-left: -30px; margin-top: -25px;">
-  			<i class="fas fa-align-left"></i>		
-  		</button>
-  		</div>
-  	</nav>
-
-<div id="map" style="width: auto;"></div>
-	<script>
-		function initMap(){
-			var location = {lat: 35.011635, lng: 135.768036};
-			var map = new google.maps.Map(document.getElementById("map"), {
-				zoom: 4,
-				center: location
-			});
-			var marker = new google.maps.Marker({
-				position: location,
-				map: map
-			});
-		}
-	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyDqcGUGCfHIqX1IvjHx_ul26MRvdr_3T8Y&callback=initMap">
-	</script>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-$(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-
+    $(document).ready(function () {
+        $("#searchbutton").click(function(){
+            $.get('https://kyoto-map-20.herokuapp.com/', function(data, status){
+             $("#search").html(data);
+             alert(status)  
+     })
+});
+});
 </script>
+</head>
+<body>
 
-
+<p>If you click on me, I will disappear.</p>
+<p id="searchbutton">Click me away!</p>
+<div id="search">Hello </div>
 </body>
 </html>
