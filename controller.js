@@ -1,18 +1,24 @@
 $(document).ready(function(){
-	$("#searchbutton").click(function(){
-	$.get('https://kyoto-map-20.herokuapp.com/',function(data,status){
-	//$("#search").html(data);
-	//alert(status)
-		alert(data)
+	$("#searchRoute").click(function(){
+		$.get('https://kyoto-map-20.herokuapp.com/',function(data,status){
+			alert(data)
+		});
 	});
-		/*$.ajax({
-			url:"https://kyoto-map-20.herokuapp.com/",
-			type:'GET',
-			dataType:'json',//addeddatatype
-			success:function(res){
-				console.log(res);
-				alert(res);
-			}
-		});*/
+
+	 $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');        
 	});
+
 });
+
+function initMap(){
+			var location = {lat: 35.011635, lng: 135.768036};
+			var map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 4,
+				center: location
+			});
+			var marker = new google.maps.Marker({
+				position: location,
+				map: map
+			});
+		}
