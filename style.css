@@ -7,7 +7,7 @@ p{
 	font-size: 1.1em;
 	font-weight: 300;
 	line-height: 1.7em;
-	color: #999;
+	color: rgb(53, 14, 14);
 }
 a,
 a:hover,
@@ -17,10 +17,18 @@ a:focus{
 	transition: all 0.3s;
 }
 
+.jumbotron{
+	background-image: url(images/banner.png); 
+	background-size: 100% 100%; 
+	margin-bottom: auto; 
+	margin-left: -10px;
+
+}
+
 /* Side Bar*/
 #sidebar.active {
-	margin-left: -250px;
-	background: #91796a;
+	margin-left: -200px;
+	background: url(images/menu-bg.png);
 }
 
 .wrapper{
@@ -30,24 +38,24 @@ a:focus{
 }
 
 #sidebar{
-	min-width: 250px;
-	max-width: 250px;
-	background: #91796a;
-	color: #fff;
+	min-width: 200px;
+	max-width: 200px;
+	background: url(images/menu-bg.png);
+	color: rgb(110, 27, 27);
 	transition: all 0.3s;
 }
 
 #sidebar ul.components{
 	padding: 20px 0;
 	border-bottom: 1px solid #91796a;
-	background: #91796a;
+	background: url(images/menu-bg.png);
 
 }
 
 #sidebar ul p{
 	color: #fff;
 	padding: 10px;
-	background: #91796a;
+	background: url(images/menu-bg.png);
 
 }
 
@@ -55,19 +63,17 @@ a:focus{
 	padding: 10px;
 	font-size: 1.1em;
 	display: block;
-	background: #91796a;
+	background: url(images/menu-bg.png);
 
 }
 
 #sidebar ul li a:hover{
-	color: #91796a;
-	background: #fff;
-	
+	color: rgb(241, 186, 168);
 }
+
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-	color: #fff;
-	background: #91796a;
+background: url(images/menu-bg.png);
 }
 
 a[data-toggle="collapse"]{
@@ -84,9 +90,22 @@ a[data-toggle="collapse"]{
 ul ul a{
 	font-size: 0.9em !important;
 	padding-left: 30px !important;
-	background: #91796a;
+	background: url(images/menu-bg.png);
 }
 
+#frm{
+	padding-left: 10px; 
+	margin-left: 10px;
+}
+
+#to{
+	padding-left: 10px; 
+	margin-left: 10px;
+}
+
+#searchbutton{
+	padding-left: 10px;
+}
 
 *{
 	margin: 0;
@@ -95,8 +114,11 @@ ul ul a{
 
 #map
 {
-	height: 1200px;
-	width: 100%;
+	height: 700px;
+	width: 1150px;
+	position: relative;
+	box-shadow: 5px 10px 10px #292828;
+	z-index: 22;
 }
 
 
@@ -107,14 +129,4 @@ ul ul a{
     #sidebar.active {
         margin-left: 0;
     }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
+  }
