@@ -1,10 +1,11 @@
 $(document).ready(function(){
 	$("#searchbutton").click(function(){
-	//$.get('https://kyoto-map-20.herokuapp.com/',function(data,status){
+	$.get('https://kyoto-map-20.herokuapp.com/',function(data,status){
 	//$("#search").html(data);
 	//alert(status)
-	//});
-		$.ajax({
+		alert(data)
+	});
+		/*$.ajax({
 			url:"https://kyoto-map-20.herokuapp.com/",
 			type:'GET',
 			dataType:'json',//addeddatatype
@@ -12,6 +13,6 @@ $(document).ready(function(){
 				console.log(res);
 				alert(res);
 			}
-		});
+		});*/
 	});
 });
