@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	initMap();
 	$("#searchRoute").click(function(){
 		$.get('https://kyoto-map-20.herokuapp.com/',function(data,status){
 			alert(data)
