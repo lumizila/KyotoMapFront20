@@ -1,3 +1,10 @@
+#tyaExample{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
 body{
 	font-family: 'Poppins', sans-serif;
 	background: #fafafa;
