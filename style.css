@@ -46,7 +46,7 @@ a:focus{
 
 #sidebar{
 	min-width: 200px;
-	max-width: 200px;
+	max-width: 230px;
 	background: url(images/menu-bg.png);
 	color: rgb(110, 27, 27);
 	transition: all 0.3s;
