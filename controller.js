@@ -1,20 +1,26 @@
-$(document).ready(function(){
-	 $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');        
-	});
-
-    $("#tyaExample").click(function(){
-        $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
-			alert("The jpname, description, latitude of the first location returned is:")
-            alert("jpname: "+data[0].jpname+" description: "+data[0].description+" latitude: "+data[0].lat);
-            alert("Only the category of the first location locations is...")
-            alert(data[0].category);
-			alert("The jpname, description, latitude of the second location returned is:")
-            alert("jpname: "+data[1].jpname+" description: "+data[1].description+" latitude: "+data[1].lat);
-		});
+  $("#tyaExample").click(function(){
+    $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
+      alert("The jpname, description, latitude of the first location returned is:")
+      alert("jpname: "+data[0].jpname+" description: "+data[0].description+" latitude: "+data[0].lat);
+      alert("Only the category of the first location locations is...")
+      alert(data[0].category);
+      alert("The jpname, description, latitude of the second location returned is:")
+      alert("jpname: "+data[1].jpname+" description: "+data[1].description+" latitude: "+data[1].lat);
     });
+  });
 
+$("#nature").click(function(){
+  $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
+    alert("The jpname, description, latitude of the first location returned is:")
+    alert("jpname: "+data[0].jpname+" description: "+data[0].description+" latitude: "+data[0].lat);
+    alert("Only the category of the first location locations is...")
+    alert(data[0].category);
+    alert("The jpname, description, latitude of the second location returned is:")
+    alert("jpname: "+data[1].jpname+" description: "+data[1].description+" latitude: "+data[1].lat);
+  });
 });
+
+
 
 function initMap() {
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
