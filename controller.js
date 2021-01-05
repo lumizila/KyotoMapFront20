@@ -56,9 +56,5 @@ function initMap() {
     marker.addListener("click", () => {
       infowindow.open(map, marker);
     });
-
-    map.addListener("click", () => {
-        alert("clicked on map")
-    });
   }
 
