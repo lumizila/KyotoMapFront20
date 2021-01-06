@@ -15,13 +15,14 @@ $("#tyaExample").click(function(){
 $("#filterCategory").click(function(){
 
     $('.ping').hide();
-
+    hideMarkers();
+    
     if ($('#nature').prop('checked') == true)
     {
         filterMarkers("park");
-        //filterMarkers("mountain");
-        //filterMarkers("river");
-        //filterMarkers
+        filterMarkers("mountain");
+        filterMarkers("river");
+        filterMarkers("garden");
 
     }
     if ($('#temples').prop('checked') == true)
@@ -64,7 +65,19 @@ $("#filterCategory").click(function(){
 }); 
 
 /**
- * Function to filter markers by category
+ * Function to hide markers by category
+ */
+
+ hideMarkers = function()
+{
+   for (i = 0; i < gmarkers1.length; i++) {
+      marker = gmarkers1[i];
+          marker.setVisible(false);
+    }  
+}
+
+/**
+ * Function to show markers by category
  */
 filterMarkers = function(category)
 {
@@ -72,15 +85,11 @@ filterMarkers = function(category)
       marker = gmarkers1[i];
 
       // If is same category or category not picked
-      if(marker.category == category || category.length == 0)
+      if(marker.category == category)
       {
           marker.setVisible(true);
       }
-      // Categories don't match 
-      else
-      {          
-          marker.setVisible(false);
-      }
+      
     }  
 }
 
