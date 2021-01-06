@@ -82,15 +82,14 @@ function initMap() {
         locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].jpname});
       }
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-      var cat;
       for (var i=0;i<locations.length;i++){
         const location=locations[i];
-        cat = location.category;
-        marker=new google.maps.Marker({
+        const cat = location.category;
+        marker = new google.maps.Marker({
           position:{lat:location.lat,lng:location.lng},
           map,
           category:cat,
-          icon:image
+          icon:image,
         });
 
         const contentString =
@@ -103,7 +102,7 @@ function initMap() {
           "</div>" +
           "</div>";
         const infowindow = new google.maps.InfoWindow({
-          content: contentString
+          content: contentString,
         });
 
         marker.addListener("click", () => {        
@@ -124,7 +123,7 @@ hideMarkers = function()
 {
    for (i = 0; i < gmarkers1.length; i++) {
       marker = gmarkers1[i];
-          marker.setVisible(false);
+      marker.setVisible(false);
     }  
 }
 
@@ -135,8 +134,7 @@ filterMarkers = function(category)
 {
    alert("in filter markers: "+category);
    for (i = 0; i < gmarkers1.length; i++) {
-      alert(gmarkers1[1].category)
-      alert("done")
+      alert(gmarkers1[i].position);
       marker = gmarkers1[i];
       // If is same category or category not picked
       if(marker.category == category)
