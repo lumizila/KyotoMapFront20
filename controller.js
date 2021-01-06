@@ -82,14 +82,14 @@ function initMap() {
         locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].jpname});
       }
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-
+      var cat;
       for (var i=0;i<locations.length;i++){
         const location=locations[i];
-
+        cat = location.category;
         marker=new google.maps.Marker({
           position:{lat:location.lat,lng:location.lng},
           map,
-          category: location.category,
+          category:cat,
           icon:image
         });
 
