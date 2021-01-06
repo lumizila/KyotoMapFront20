@@ -14,7 +14,6 @@ $("#tyaExample").click(function(){
 
 $("#filterCategory").click(function(){
 
-    $('.ping').hide();
     hideMarkers();
     
     if ($('#nature').prop('checked') == true)
@@ -90,8 +89,8 @@ function initMap() {
         marker=new google.maps.Marker({
           position:{lat:location.lat,lng:location.lng},
           map,
-          icon:image,
-          category: location.category
+          category: location.category,
+          icon:image
         });
 
         const contentString =
@@ -134,8 +133,10 @@ hideMarkers = function()
  */
 filterMarkers = function(category)
 {
-    alert("in filter markers: "+category)
+   alert("in filter markers: "+category);
    for (i = 0; i < gmarkers1.length; i++) {
+      alert(gmarkers1[1].category)
+      alert("done")
       marker = gmarkers1[i];
       // If is same category or category not picked
       if(marker.category == category)
