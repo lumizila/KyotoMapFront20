@@ -26,37 +26,47 @@ $("#filterCategory").click(function(){
     }
     if ($('#temples').prop('checked') == true)
     {
-        
+        filterMarkers("park");
+        filterMarkers("mountain");
     }
     if ($('#shrines').prop('checked') == true)
     {
+        filterMarkers("jinjya");
     }
     if ($('#castles').prop('checked') == true)
     {
-        
+        filterMarkers("castle");
+        filterMarkers("palace");
     }
     if ($('#museums').prop('checked') == true)
     {
+        filterMarkers("museum");
     }
     if ($('#sightseeing').prop('checked') == true)
     {
-       
+       filterMarkers("tower");
+       filterMarkers("mountain");
     }
     if ($('#resandbars').prop('checked') == true)
     {
+        filterMarkers("restaurant");
     }
     if ($('#hospitals').prop('checked') == true)
     {
+        filterMarkers("hospital");
     }
     if ($('#shopping').prop('checked') == true)
     {
-        
+        filterMarkers("shop");
+        filterMarkers("mall");
     }
     if ($('#stations').prop('checked') == true)
     {
+        filterMarkers("station");
     }
     if ($('#others').prop('checked') == true)
     {
+        filterMarkers("cemetery");
     }
 
 });
@@ -85,7 +95,6 @@ function initMap() {
       
       for (var i=0;i<locations.length;i++){
         const location=locations[i];
-        //const cat = ;
         marker = new google.maps.Marker({
           position: {lat:location.lat,lng:location.lng},
           map: ourmap,
@@ -117,7 +126,7 @@ function initMap() {
   }
 
   /**
- * Function to hide markers by category
+ * Function to hide markers
  */
 
 hideMarkers = function()
@@ -134,9 +143,7 @@ hideMarkers = function()
  */
 filterMarkers = function(category)
 {
-   alert("in filter markers: "+category);
    var marker;
-   alert(gmarkers1[1].category)
    for (i = 0; i < gmarkers1.length; i++) {
       //alert(gmarkers1[i].position);
       marker = gmarkers1[i];
