@@ -12,8 +12,7 @@ $("#tyaExample").click(function(){
   });
 
 
-$("#filterCategory").submit(function(e){
-    e.preventDefault();
+$("#filterCategory").click(function(){
 
     $('.ping').hide();
 
