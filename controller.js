@@ -9,23 +9,17 @@
     });
   });
 
-var natchecked = function(){
-  $("#nature:checked").length;
-    $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
-      var i;
-      for(i=0; i<data.length; i++){
+  function natchecked(data,status){
+   var natcheckbox =  document.getElementById("nature");
+   var alert =  $.get('https://kyoto-map-20.herokuapp.com/locations/');
+   var i;
+    for(i=0; i<data.length; i++){
+      if (natcheckbox == true){
         alert(data[i].jpname+ "," +data[i].category);
       }
     }
-    )};
-
-
-natchecked();
-$( "nature[type=checkbox]" ).on( "click", natchecked );
-
-
-
-
+  };
+    
 function initMap() {
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
     const map = new google.maps.Map(document.getElementById("map"), {
