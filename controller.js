@@ -67,7 +67,7 @@ var gmarkers1 = [];
 
 function initMap() {
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
-    const map = new google.maps.Map(document.getElementById("map"), {
+    const ourmap = new google.maps.Map(document.getElementById("map"), {
       zoom: 14,
       center: garden,
     });
@@ -86,10 +86,10 @@ function initMap() {
         const location=locations[i];
         const cat = location.category;
         marker = new google.maps.Marker({
-          position:{lat:location.lat,lng:location.lng},
-          map,
-          category:cat,
-          icon:image,
+          position: {lat:location.lat,lng:location.lng},
+          map: ourmap,
+          category: cat,
+          icon: image
         });
 
         const contentString =
