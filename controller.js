@@ -88,7 +88,7 @@ function initMap() {
         marker = new google.maps.Marker({
           position: {lat:location.lat,lng:location.lng},
           map: ourmap,
-          category: cat,
+          label: cat,
           icon: image
         });
 
@@ -135,7 +135,7 @@ filterMarkers = function(category)
 {
    alert("in filter markers: "+category);
    var marker;
-   alert(gmarkers1[1].category)
+   alert(gmarkers1[1].label)
    for (i = 0; i < gmarkers1.length; i++) {
       //alert(gmarkers1[i].position);
       marker = gmarkers1[i];
