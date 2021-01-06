@@ -16,59 +16,61 @@
 <div class="wrapper">
 
  <nav id="sidebar">	
+
+
   	 <ul class="lisst-unstyled components">
-	 	<li class="active">
+		<li class="active">
  	 		<a href="#categoriesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Categories</a>
  	 	  	<ul class="collapse list-unstyled" id="categoriesSubmenu">
-			<label class="container">
-				<input type="checkbox" id="nature"> Nature 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Temples
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Shrines 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Palace and Castles
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Museums
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Sightseeing
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Restaurant & Bars
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Hospital 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Shopping 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Stations 
-				<span class="checkmark"></span>
-			</label>
-			<label class="container">
-				<input type="checkbox"> Others 
-				<span class="checkmark"></span>
-			</label>
-		  </li>
-  	 </ul>
- 	 	<li>
- 	 		<a href="#">List</a>
-		</li> 		
+				
+				<form id="filterCategory" class="form-horizontal">
+					<div class="form-group">   
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+							  <label><input id="nature" type="checkbox" name="remember"> Nature </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="temples" type="checkbox" name="remember"> Temples </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="shrines" type="checkbox" name="remember"> Shrines </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="castles" type="checkbox" name="remember"> Palace and Castles </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="museums" type="checkbox" name="remember"> Museums </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="sightseeing" type="checkbox" name="remember"> Sightseeing </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="resandbars" type="checkbox" name="remember"> Restaurant & Bars </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="hospitals" type="checkbox" name="remember"> Hospital </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="shopping" type="checkbox" name="remember"> Shopping </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="stations" type="checkbox" name="remember"> Stations </label>
+							</div>
+							<div class="checkbox">
+							  <label><input id="others" type="checkbox" name="remember"> Others </label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">        
+					  <div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-danger">Submit</button>
+					  </div>
+					</div>
+				 </form>
+		
+			</ul>
+		</li>
+ 	 			
 		<li class="active">
 			<a href="#routeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Route</a>
 			<ul class="collapse list-unstyled" id="routeSubmenu" >
@@ -82,9 +84,9 @@
 				  </div>
 				  <button type="button" id="searchRoute" class="btn btn-danger" style="margin-left: 10px;">Search</button>
 			</ul>
-  		</li>		  
-	 	</ul>
- 	 	</li>
+  		</li>
+		  	 	
+ 	 	
 	 </ul>
  </nav>
 
@@ -97,17 +99,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script>
-	$(document).ready(function () {
-		$("#searchbutton").click(function(){
-	 		$.get('https://kyoto-map-20.herokuapp.com', function(data, status){
-			 $("#searchbutton").html(data);
-			 alert(status)	
-	 })
-});
-});
-</script>
 
 </body>
 </html>

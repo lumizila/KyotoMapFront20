@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 $("#tyaExample").click(function(){
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
       alert("The jpname, description, latitude of the first location returned is:")
@@ -12,16 +11,65 @@ $("#tyaExample").click(function(){
     });
   });
 
-$("#nature").click(function(){
-  $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
-    alert("The jpname, description, latitude of the first location returned is:")
-    alert("jpname: "+data[0].jpname+" description: "+data[0].description+" latitude: "+data[0].lat);
-  });
+
+$("#filterCategory").submit(function(){
+
+    $('.ping').hide();
+
+    if ($('#nature').prop('checked') == true)
+    {
+        $(".park").show();
+        $(".mountain").show();
+        $(".river").show();
+        $(".garden").show();
+    }
+    if ($('#temples').prop('checked') == true)
+    {
+        $(".temple").show();
+    }
+    if ($('#shrines').prop('checked') == true)
+    {
+        $(".jinjya").show();       
+    }
+    if ($('#castles').prop('checked') == true)
+    {
+        $(".palace").show();
+        $(".castle").show();
+    }
+    if ($('#museums').prop('checked') == true)
+    {
+        $(".museum").show();
+    }
+    if ($('#sightseeing').prop('checked') == true)
+    {
+        $(".tower").show();
+        $(".mountain").show();
+    }
+    if ($('#resandbars').prop('checked') == true)
+    {
+        $(".restaurant").show();
+    }
+    if ($('#hospitals').prop('checked') == true)
+    {
+        $(".hospital").show();     
+    }
+    if ($('#shopping').prop('checked') == true)
+    {
+        $(".shop").show();
+        $(".mall").show();
+    }
+    if ($('#stations').prop('checked') == true)
+    {
+        $(".station").show();
+    }
+    if ($('#others').prop('checked') == true)
+    {
+        $(".cemetery").show();
+    }
+
 });
 
-
-});
-
+}); 
 
 
 
@@ -48,14 +96,13 @@ function initMap() {
         const location=locations[i];
 
         marker=new google.maps.Marker({
-
           position:{lat:location.lat,lng:location.lng},
           map,
-          icon:image,
+          icon:image
         });
 
         const contentString =
-          '<div id="" class="'+location.category+'">' +
+          '<div id="" class="ping '+location.category+'">' +
           '<div id="">' +
           "</div>" +
           '<h1 id="">'+location.name+'</h1>' +
