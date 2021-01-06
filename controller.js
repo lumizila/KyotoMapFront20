@@ -13,7 +13,7 @@ $("#tyaExample").click(function(){
 
 
 $("#filterCategory").submit(function(){
-
+    e.preventDefault();
     $('.ping').hide();
 
     if ($('#nature').prop('checked') == true)
