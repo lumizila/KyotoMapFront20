@@ -79,16 +79,17 @@ function initMap() {
       for (var i=0;i<data.length;i++){
         var t_lat=parseFloat(data[i].lon);
         var t_lng=parseFloat(data[i].lat);
-        locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].jpname});
+        locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].jpname, category:data[i].category});
       }
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+      
       for (var i=0;i<locations.length;i++){
         const location=locations[i];
-        const cat = location.category;
+        //const cat = ;
         marker = new google.maps.Marker({
           position: {lat:location.lat,lng:location.lng},
           map: ourmap,
-          label: cat,
+          category: location.category,
           icon: image
         });
 
@@ -135,7 +136,7 @@ filterMarkers = function(category)
 {
    alert("in filter markers: "+category);
    var marker;
-   alert(gmarkers1[1].label)
+   alert(gmarkers1[1].category)
    for (i = 0; i < gmarkers1.length; i++) {
       //alert(gmarkers1[i].position);
       marker = gmarkers1[i];
