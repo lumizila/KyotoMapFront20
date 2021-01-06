@@ -15,6 +15,7 @@ $("#tyaExample").click(function(){
 $("#filterCategory").click(function(){
 
     hideMarkers();
+    var notchecked = true;
     
     if ($('#nature').prop('checked') == true)
     {
@@ -22,53 +23,69 @@ $("#filterCategory").click(function(){
         filterMarkers("mountain");
         filterMarkers("river");
         filterMarkers("garden");
+        notchecked = false;
 
     }
     if ($('#temples').prop('checked') == true)
     {
         filterMarkers("park");
         filterMarkers("mountain");
+        notchecked = false;
+
     }
     if ($('#shrines').prop('checked') == true)
     {
         filterMarkers("jinja");
+        notchecked = false;
     }
     if ($('#castles').prop('checked') == true)
     {
         filterMarkers("castle");
         filterMarkers("palace");
+        notchecked = false;
+
     }
     if ($('#museums').prop('checked') == true)
     {
         filterMarkers("museum");
+        notchecked = false;
     }
     if ($('#sightseeing').prop('checked') == true)
     {
        filterMarkers("tower");
        filterMarkers("mountain");
+       notchecked = false;
     }
     if ($('#resandbars').prop('checked') == true)
     {
         filterMarkers("restaurant");
+        notchecked = false;
     }
     if ($('#hospitals').prop('checked') == true)
     {
         filterMarkers("hospital");
+        notchecked = false;
     }
     if ($('#shopping').prop('checked') == true)
     {
         filterMarkers("shop");
         filterMarkers("mall");
+        notchecked = false;
     }
     if ($('#stations').prop('checked') == true)
     {
         filterMarkers("station");
+        notchecked = false;
     }
     if ($('#others').prop('checked') == true)
     {
         filterMarkers("cemetery");
+        notchecked = false;
     }
-
+    //show all markers if no filter was selected
+    if(notchecked == true){
+        showMarkers();
+    }
 });
 
 }); 
@@ -135,6 +152,19 @@ hideMarkers = function()
    for (i = 0; i < gmarkers1.length; i++) {
       marker = gmarkers1[i];
       marker.setVisible(false);
+    }  
+}
+
+ /**
+ * Function to show all markers
+ */
+
+showMarkers = function()
+{
+    var marker;
+   for (i = 0; i < gmarkers1.length; i++) {
+      marker = gmarkers1[i];
+      marker.setVisible(true);
     }  
 }
 
