@@ -134,9 +134,10 @@ hideMarkers = function()
  */
 filterMarkers = function(category)
 {
+    alert("in filter markers: "+category)
    for (i = 0; i < gmarkers1.length; i++) {
       marker = gmarkers1[i];
-
+      console.log("test");
       // If is same category or category not picked
       if(marker.category == category)
       {
