@@ -9,14 +9,15 @@
     });
   });
 
-$("#nature").click(function(){
-  $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
-    alert("The jpname, description, latitude of the first location returned is:")
-    alert("jpname: "+data[0].jpname+" description: "+data[0].description+" latitude: "+data[0].lat);
-    alert("Only the category of the first location locations is...")
-    alert(data[0].category);
-    alert("The jpname, description, latitude of the second location returned is:")
-    alert("jpname: "+data[1].jpname+" description: "+data[1].description+" latitude: "+data[1].lat);
+var natchecked = function(){
+  $("#nature:checked").length;
+    $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
+      var i;
+      for(i=0; i<data.length; i++){
+        alert(data[i].jpname","data[i].category="park");
+      } 
+natchecked();
+    }
   });
 });
 
