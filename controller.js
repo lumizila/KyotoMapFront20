@@ -31,7 +31,7 @@ $("#filterCategory").click(function(){
     }
     if ($('#shrines').prop('checked') == true)
     {
-        filterMarkers("jinjya");
+        filterMarkers("jinja");
     }
     if ($('#castles').prop('checked') == true)
     {
