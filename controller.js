@@ -64,35 +64,7 @@ $("#filterCategory").click(function(){
 
 }); 
 
-/**
- * Function to hide markers by category
- */
-
- hideMarkers = function()
-{
-   for (i = 0; i < gmarkers1.length; i++) {
-      marker = gmarkers1[i];
-          marker.setVisible(false);
-    }  
-}
-
-/**
- * Function to show markers by category
- */
-filterMarkers = function(category)
-{
-   for (i = 0; i < gmarkers1.length; i++) {
-      marker = gmarkers1[i];
-
-      // If is same category or category not picked
-      if(marker.category == category)
-      {
-          marker.setVisible(true);
-      }
-      
-    }  
-}
-
+var gmarkers1 = [];
 
 function initMap() {
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
@@ -139,11 +111,37 @@ function initMap() {
           infowindow.open(map, marker);
         });
 
-//        marker.classList.add("ping");
- //       marker.classList.add(location.category);
-          
-      };
-
-         
-      });
+        gmarkers1.push(marker);
+        
+        };         
+    });
   }
+
+  /**
+ * Function to hide markers by category
+ */
+
+hideMarkers = function()
+{
+   for (i = 0; i < gmarkers1.length; i++) {
+      marker = gmarkers1[i];
+          marker.setVisible(false);
+    }  
+}
+
+/**
+ * Function to show markers by category
+ */
+filterMarkers = function(category)
+{
+   for (i = 0; i < gmarkers1.length; i++) {
+      marker = gmarkers1[i];
+
+      // If is same category or category not picked
+      if(marker.category == category)
+      {
+          marker.setVisible(true);
+      }
+      
+    }  
+}
