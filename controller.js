@@ -121,6 +121,7 @@ function initMap() {
 
 hideMarkers = function()
 {
+    var marker;
    for (i = 0; i < gmarkers1.length; i++) {
       marker = gmarkers1[i];
       marker.setVisible(false);
@@ -133,6 +134,8 @@ hideMarkers = function()
 filterMarkers = function(category)
 {
    alert("in filter markers: "+category);
+   var marker;
+   alert(gmarkers1[1].category)
    for (i = 0; i < gmarkers1.length; i++) {
       //alert(gmarkers1[i].position);
       marker = gmarkers1[i];
