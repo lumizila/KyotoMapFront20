@@ -14,12 +14,15 @@ var natchecked = function(){
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
       var i;
       for(i=0; i<data.length; i++){
-        alert(data[i].jpname","data[i].category="park");
-      } 
-natchecked();
+        alert(data[i].jpname+ "," +data[i].category);
+      }
     }
-  });
-});
+    )};
+
+
+natchecked();
+$( "nature[type=checkbox]" ).on( "click", natchecked );
+
 
 
 
