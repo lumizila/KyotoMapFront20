@@ -18,60 +18,71 @@ $("#filterCategory").click(function(){
 
     if ($('#nature').prop('checked') == true)
     {
-        $(".park").show();
-        $(".mountain").show();
-        $(".river").show();
-        $(".garden").show();
+        filterMarkers("park");
+        //filterMarkers("mountain");
+        //filterMarkers("river");
+        //filterMarkers
+
     }
     if ($('#temples').prop('checked') == true)
     {
-        $(".temple").show();
+        
     }
     if ($('#shrines').prop('checked') == true)
     {
-        $(".jinjya").show();       
     }
     if ($('#castles').prop('checked') == true)
     {
-        $(".palace").show();
-        $(".castle").show();
+        
     }
     if ($('#museums').prop('checked') == true)
     {
-        $(".museum").show();
     }
     if ($('#sightseeing').prop('checked') == true)
     {
-        $(".tower").show();
-        $(".mountain").show();
+       
     }
     if ($('#resandbars').prop('checked') == true)
     {
-        $(".restaurant").show();
     }
     if ($('#hospitals').prop('checked') == true)
     {
-        $(".hospital").show();     
     }
     if ($('#shopping').prop('checked') == true)
     {
-        $(".shop").show();
-        $(".mall").show();
+        
     }
     if ($('#stations').prop('checked') == true)
     {
-        $(".station").show();
     }
     if ($('#others').prop('checked') == true)
     {
-        $(".cemetery").show();
     }
 
 });
 
 }); 
 
+/**
+ * Function to filter markers by category
+ */
+filterMarkers = function(category)
+{
+   for (i = 0; i < gmarkers1.length; i++) {
+      marker = gmarkers1[i];
 
+      // If is same category or category not picked
+      if(marker.category == category || category.length == 0)
+      {
+          marker.setVisible(true);
+      }
+      // Categories don't match 
+      else
+      {          
+          marker.setVisible(false);
+      }
+    }  
+}
 
 
 function initMap() {
@@ -98,7 +109,8 @@ function initMap() {
         marker=new google.maps.Marker({
           position:{lat:location.lat,lng:location.lng},
           map,
-          icon:image
+          icon:image,
+          category: location.category
         });
 
         const contentString =
@@ -118,8 +130,11 @@ function initMap() {
           infowindow.open(map, marker);
         });
 
-        marker.classList.add("ping");
-        marker.classList.add(location.category);
+//        marker.classList.add("ping");
+ //       marker.classList.add(location.category);
+          
       };
+
+         
       });
   }
