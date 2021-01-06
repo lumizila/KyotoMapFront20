@@ -12,8 +12,9 @@ $("#tyaExample").click(function(){
   });
 
 
-$("#filterCategory").submit(function(){
+$("#filterCategory").submit(function(e){
     e.preventDefault();
+
     $('.ping').hide();
 
     if ($('#nature').prop('checked') == true)
