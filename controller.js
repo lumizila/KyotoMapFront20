@@ -102,7 +102,7 @@ function initMap() {
         });
 
         const contentString =
-          '<div id="" class="ping '+location.category+'">' +
+          '<div id="" class="">' +
           '<div id="">' +
           "</div>" +
           '<h1 id="">'+location.name+'</h1>' +
@@ -111,12 +111,15 @@ function initMap() {
           "</div>" +
           "</div>";
         const infowindow = new google.maps.InfoWindow({
-          content: contentString,
+          content: contentString
         });
 
-        marker.addListener("click", () => {
+        marker.addListener("click", () => {        
           infowindow.open(map, marker);
         });
+
+        marker.classList.add("ping");
+        marker.classList.add(location.category);
       };
       });
   }
