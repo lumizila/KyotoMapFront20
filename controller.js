@@ -134,7 +134,7 @@ filterMarkers = function(category)
 {
    alert("in filter markers: "+category);
    for (i = 0; i < gmarkers1.length; i++) {
-      alert(gmarkers1[i].position);
+      //alert(gmarkers1[i].position);
       marker = gmarkers1[i];
       // If is same category or category not picked
       if(marker.category == category)
