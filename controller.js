@@ -127,16 +127,16 @@ function initMap() { //ok
         var contentString = '<div id="" class="">' +
           '<h1 id="">'+location.pname+'</h1>' +         
           '<div class="row">';
-        /*
-        for (var i = 0; i<location.imageUrls.length; i++){ //ok
-            contentString = contentString +
+        
+        for (var i = 0; i<location.imageUrls.length; i++){ 
+            /*contentString = contentString +
             '<div class="col-md-4">'+
                  '<div class="thumbnail">'+
                  '<img src="'+location.imageUrls[i]+'" style="width:100%" class="img-rounded" alt="image1">'+             
                  '</div>' +
-            '</div>'; 
-        } //ok
-        */
+            '</div>'; */
+        } 
+        
          contentString = contentString +
           '</div>' +
           '<div id="">' +
@@ -149,7 +149,7 @@ function initMap() { //ok
         //const contents = contentString;
         const infowindow = new google.maps.InfoWindow({
           content: contentString,
-        });  //ok   
+        });    
 
         google.maps.event.addListener(marker, "click", function (event) {
             for(var j = 0; j < infoWindows.length; j++){
