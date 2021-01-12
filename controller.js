@@ -124,7 +124,7 @@ function initMap() { //ok
           icon: image
         }); //ok
 
-        
+        /*
 
         var contentString = '<div id="" class="">' +
           '<h1 id="">'+location.pname+'</h1>' +         
@@ -164,7 +164,7 @@ function initMap() { //ok
         infoWindows.push(infowindow);
 
         gmarkers1.push(marker);
-        
+        */
         }     //for ok    
     });// get ok
     
