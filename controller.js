@@ -101,7 +101,9 @@ function initMap() {
     });
 
     ourmap.addListener('click', function() {
-        if (infoWindow) infoWindow.close();
+        for(var j = 0; j < infoWindows.length; j++){
+                infoWindows[j].close();
+        }
     });
 
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
