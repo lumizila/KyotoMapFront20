@@ -109,7 +109,7 @@ function initMap() { //ok
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(locations,status){
 
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-      
+      /*
       for (var i=0;i<locations.length;i++){
         
         //parsing lat and lon
@@ -117,12 +117,12 @@ function initMap() { //ok
         var t_lng=parseFloat(locations[i].lat);
 
         const location=locations[i];
-        const marker = new google.maps.Marker({ //ok
+        const marker = new google.maps.Marker({ 
           position: {lat:t_lat,lng:t_lng},
           map: ourmap,
           category: location.category,
           icon: image
-        }); //ok
+        }); 
 
         /*
 
