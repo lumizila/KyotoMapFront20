@@ -148,6 +148,7 @@ function initMap() {
              '</div>' +
           '</div>' +
           '<div id="">' +
+          "<p></p>"+
           "<p>"+ location.description+"</p>"+
           "<p><a style='color:blue; text-decoration: underline;' href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
           "</div>" +
