@@ -124,7 +124,7 @@ function initMap() {
           '<div id="" class="locPopUp">' +
           '<div id="">' +
           "</div>" +
-          '<h1 id="">'+location.name+'</h1>' +
+          '<h1 id="">blabla'+location.name+'</h1>' +
           '<div id="">' +
           "<p>"+ location.description+"</p>"
           "<p><a href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
