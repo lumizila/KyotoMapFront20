@@ -137,7 +137,7 @@ function initMap() {
 
         marker.addListener("click", () => {        
             //openInfoWindow(infowindow, map, marker);
-            document.getElementsByClassName("locPopUp").style.visibility = "hidden";
+            //document.getElementsByClassName("locPopUp").style.visibility = "hidden";
             for(var j = 0; j < infoWindows.length; j++){
                 InfoWindows[j].close();
             }
