@@ -89,12 +89,12 @@ $("#filterCategory").click(function(){
 });
 
 }); 
-/*
+
 var gmarkers1 = [];
 var infoWindows = [];
 
 function initMap() { //ok
-    const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
+/*    const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
     const ourmap = new google.maps.Map(document.getElementById("map"), { //ok
       zoom: 14,
       center: garden,
@@ -167,6 +167,7 @@ function initMap() { //ok
         
         };     //for ok    
     });// get ok
+    */
  } //ok function
 
   /**
