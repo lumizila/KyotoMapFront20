@@ -142,12 +142,12 @@ function initMap() {
 
 
         marker.addListener("click", () => {        
-            //infoWindow.setContent(this.position);
+            infoWindow.setContent(marker.position);
 
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
             }
-            infowindow.open(map, this);
+            infowindow.open(map, marker);
         });
         
         infoWindows.push(infowindow);
