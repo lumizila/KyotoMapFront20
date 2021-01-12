@@ -89,7 +89,7 @@ $("#filterCategory").click(function(){
 });
 
 }); 
-
+/*
 var gmarkers1 = [];
 var infoWindows = [];
 
