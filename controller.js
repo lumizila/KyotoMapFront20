@@ -132,14 +132,20 @@ function initMap() {
           '<h1 id="">'+location.name+'</h1>' +         
           '<div class="row">'+
             '<div class="col-md-4">'+
-                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" class="img-rounded" alt="image1">'+             
+                 '<div class="thumbnail">'+
+                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
+                 '</div>' +
             '</div>' +
              '<div class="col-md-4">'+
-                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" class="img-rounded" alt="image1">'+                         
-            '</div>' +
+                 '<div class="thumbnail">'+
+                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
+                 '</div>' +
+             '</div>' +
              '<div class="col-md-4">'+
-                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" class="img-rounded" alt="image1">'+                       
-            '</div>' +
+                 '<div class="thumbnail">'+
+                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
+                 '</div>' +
+             '</div>' +
           '</div>' +
           '<div id="">' +
           "<p>"+ location.description+"</p>"+
