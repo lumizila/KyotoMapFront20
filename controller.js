@@ -129,12 +129,12 @@ function initMap() { //ok
           '<div class="row">';
         
         for (var k = 0; k<location.imageUrls.length; k++){ 
-            /*contentString = contentString +
+            contentString = contentString +
             '<div class="col-md-4">'+
                  '<div class="thumbnail">'+
                  '<img src="'+location.imageUrls[i]+'" style="width:100%" class="img-rounded" alt="image1">'+             
                  '</div>' +
-            '</div>'; */
+            '</div>'; 
         } 
         
          contentString = contentString +
