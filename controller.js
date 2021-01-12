@@ -127,7 +127,7 @@ function initMap() {
           '<h1 id="">'+location.name+'</h1>' +
           '<div id="">' +
           "<p>"+ location.description+"</p>"+
-          "<p><a href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
+          "<p><a style='color:blue; text-decoration: underline;' href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
           "</div>" +
           "</div>";
         const infowindow = new google.maps.InfoWindow({
