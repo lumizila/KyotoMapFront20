@@ -124,16 +124,24 @@ function initMap() {
           icon: image
         });
 
-        //var imagesHtml = getImagesHtml(location.pid);
-        //alert(imagesHtml);
+        
 
         const contentString =
           '<div id="" class="">' +
           '<div id="">' +
           "</div>" +
           '<h1 id="">'+location.pname+'</h1>' +         
-          '<div class="row">'+
+          '<div class="row">';
+
+        for (var i=0;i<location.imageUrls.length;i++){
+            contentString = contentString +
             '<div class="col-md-4">'+
+                 '<div class="thumbnail">'+
+                 '<img src="'+location.imageUrls[i]+'" style="width:100%" class="img-rounded" alt="image1">'+             
+                 '</div>' +
+            '</div>'; 
+        }
+            /*'<div class="col-md-4">'+
                  '<div class="thumbnail">'+
                  '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
                  '</div>' +
@@ -147,7 +155,8 @@ function initMap() {
                  '<div class="thumbnail">'+
                  '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
                  '</div>' +
-             '</div>' +
+             '</div>' +*/
+         contentString = contentString +
           '</div>' +
           '<div id="">' +
           "<p></p>"+
