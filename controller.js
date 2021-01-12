@@ -126,7 +126,7 @@ function initMap() {
 
         
 
-        const contentString =
+        var contentString =
           '<div id="" class="">' +
           '<div id="">' +
           "</div>" +
@@ -151,8 +151,9 @@ function initMap() {
           "</div>" +
           "</div>";
         
+        const contents = contentString;
         const infowindow = new google.maps.InfoWindow({
-          content: contentString,
+          content: contents,
         });     
 
         google.maps.event.addListener(marker, "click", function (event) {
