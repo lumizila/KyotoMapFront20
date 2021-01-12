@@ -118,7 +118,7 @@ function initMap() {
       
       for (var i=0;i<locations.length;i++){
         const location=locations[i];
-        var marker = new google.maps.Marker({
+        const marker = new google.maps.Marker({
           position: {lat:location.lat,lng:location.lng},
           map: ourmap,
           category: location.category,
@@ -140,12 +140,12 @@ function initMap() {
           content: contentString,
         });     
 
-        marker.addListener("click", () => {      
+        google.maps.event.addListener(marker, "click", function (event) {
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
             }
-            infowindow.setPosition(this.position);
-            infowindow.open(map, this);
+            infowindow.setPosition(marker.position);
+            infowindow.open(map, marker);
         });
         
         infoWindows.push(infowindow);
