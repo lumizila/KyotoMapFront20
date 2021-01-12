@@ -122,15 +122,13 @@ function initMap() { //ok
           map: ourmap,
           category: location.category,
           icon: image
-        }); 
-
-        
+        });      
 
         var contentString = '<div id="" class="">' +
           '<h1 id="">'+location.pname+'</h1>' +         
           '<div class="row">';
-        /*
-        for (var i=0;i<location.imageUrls.length;i++){ //ok
+        
+        for (var i = 0; i<location.imageUrls.length; i++){ //ok
             contentString = contentString +
             '<div class="col-md-4">'+
                  '<div class="thumbnail">'+
@@ -138,7 +136,7 @@ function initMap() { //ok
                  '</div>' +
             '</div>'; 
         } //ok
-        
+        /*
          contentString = contentString +
           '</div>' +
           '<div id="">' +
