@@ -100,6 +100,9 @@ function initMap() {
       center: garden,
     });
 
+    ourmap.addListener('click', function() {
+        if (infoWindow) infoWindow.close();
+    });
 
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
 
@@ -136,8 +139,7 @@ function initMap() {
 
 
         marker.addListener("click", () => {        
-            //openInfoWindow(infowindow, map, marker);
-            //document.getElementsByClassName("locPopUp").style.visibility = "hidden";
+           
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
             }
@@ -151,12 +153,6 @@ function initMap() {
         };         
     });
   }
-
-/*function to open the infowindow and close others*/
-//function openInfoWindow (google.maps.InfoWindow infw, google.maps.Map mp, google.maps.Marker mark){
-
-
-//}
 
 
   /**
