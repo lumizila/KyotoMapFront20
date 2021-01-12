@@ -118,7 +118,7 @@ function initMap() {
       
       for (var i=0;i<locations.length;i++){
         const location=locations[i];
-        marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
           position: {lat:location.lat,lng:location.lng},
           map: ourmap,
           category: location.category,
@@ -144,8 +144,8 @@ function initMap() {
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
             }
-            infowindow.setPosition(marker.position);
-            infowindow.open(map, marker);
+            infowindow.setPosition(this.position);
+            infowindow.open(map, this);
         });
         
         infoWindows.push(infowindow);
