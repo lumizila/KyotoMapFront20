@@ -91,6 +91,7 @@ $("#filterCategory").click(function(){
 }); 
 
 var gmarkers1 = [];
+var infoWindows = [];
 
 function initMap() {
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
@@ -120,7 +121,7 @@ function initMap() {
         });
 
         const contentString =
-          '<div id="" class="">' +
+          '<div id="" class="locPopUp">' +
           '<div id="">' +
           "</div>" +
           '<h1 id="">'+location.name+'</h1>' +
@@ -133,8 +134,15 @@ function initMap() {
           content: contentString,
         });
 
+        infoWindows.push(infowindow);
+
         marker.addListener("click", () => {        
-          infowindow.open(map, marker);
+            //openInfoWindow(infowindow, map, marker);
+            //document.getElementsByClassName("locPopUp").style.visibility = "hidden";
+            for(var j = 0; j < infoWindows.length; j++){
+                InfoWindows[j].close();
+            }
+            infowindow.open(map, marker);
         });
 
         gmarkers1.push(marker);
@@ -142,6 +150,13 @@ function initMap() {
         };         
     });
   }
+
+/*function to open the infowindow and close others*/
+//function openInfoWindow (google.maps.InfoWindow infw, google.maps.Map mp, google.maps.Marker mark){
+
+
+//}
+
 
   /**
  * Function to hide markers
