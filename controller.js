@@ -108,12 +108,6 @@ function initMap() {
 
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(locations,status){
 
-      //var locations=new Array();
-      /*for (var i=0;i<data.length;i++){
-        var t_lat=parseFloat(data[i].lon);
-        var t_lng=parseFloat(data[i].lat);
-        locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].pname, category:data[i].category, webUrl:data[i].webUrl});
-      }*/
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
       
       for (var i=0;i<locations.length;i++){
@@ -129,6 +123,9 @@ function initMap() {
           category: location.category,
           icon: image
         });
+
+        var imagesHtml = getImagesHtml(location.pid);
+        alert(imagesHtml);
 
         const contentString =
           '<div id="" class="">' +
@@ -178,6 +175,28 @@ function initMap() {
         };         
     });
   }
+
+/*
+    Function to create the images html to insert on infowindow
+*/
+
+function getImagesHtml(pid){
+    var returnstring = '<div class="row">'
+
+    $.get('https://kyoto-map-20.herokuapp.com/locations/images/'+pid,function(images,status){
+        for (var i=0;i<images.length;i++){
+            returnstring = returnstring +
+            '<div class="col-md-4">'+
+                 '<div class="thumbnail">'+
+                 '<img src="'+images[i].imageUrl+'" style="width:100%" class="img-rounded" alt="image1">'+             
+                 '</div>' +
+            '</div>'; 
+        }
+    }
+
+    returnstring = returnstring + '</div>';
+    return returnstring;
+}
 
 
   /**
