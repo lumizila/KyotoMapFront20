@@ -106,7 +106,7 @@ function initMap() {
       for (var i=0;i<data.length;i++){
         var t_lat=parseFloat(data[i].lon);
         var t_lng=parseFloat(data[i].lat);
-        locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].jpname, category:data[i].category});
+        locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].pname, category:data[i].category, webUrl:data[i].webUrl});
       }
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
       
@@ -126,6 +126,7 @@ function initMap() {
           '<h1 id="">'+location.name+'</h1>' +
           '<div id="">' +
           "<p>"+ location.description+"</p>"
+          "<p><a href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
           "</div>" +
           "</div>";
         const infowindow = new google.maps.InfoWindow({
