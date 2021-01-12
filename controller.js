@@ -141,21 +141,7 @@ function initMap() {
                  '</div>' +
             '</div>'; 
         }
-            /*'<div class="col-md-4">'+
-                 '<div class="thumbnail">'+
-                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
-                 '</div>' +
-            '</div>' +
-             '<div class="col-md-4">'+
-                 '<div class="thumbnail">'+
-                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
-                 '</div>' +
-             '</div>' +
-             '<div class="col-md-4">'+
-                 '<div class="thumbnail">'+
-                 '<img src="https://www.japan-guide.com/g18/3915_top.jpg" style="width:100%" class="img-rounded" alt="image1">'+             
-                 '</div>' +
-             '</div>' +*/
+        
          contentString = contentString +
           '</div>' +
           '<div id="">' +
@@ -184,29 +170,6 @@ function initMap() {
         };         
     });
  }
-
-/*
-    Function to create the images html to insert on infowindow
-*/
-
-function getImagesHtml(pid){
-    var returnstring = '<div class="row">'
-
-    $.get('https://kyoto-map-20.herokuapp.com/locations/images/'+pid,function(images,status){
-        for (var i=0;i<images.length;i++){
-            returnstring = returnstring +
-            '<div class="col-md-4">'+
-                 '<div class="thumbnail">'+
-                 '<img src="'+images[i].imageUrl+'" style="width:100%" class="img-rounded" alt="image1">'+             
-                 '</div>' +
-            '</div>'; 
-        }
-    }
-
-    returnstring = returnstring + '</div>';
-    return returnstring;
-}
-
 
   /**
  * Function to hide markers
