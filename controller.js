@@ -95,7 +95,7 @@ var infoWindows = [];
 
 function initMap() { //ok
    const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
-    const ourmap = new google.maps.Map(document.getElementById("map"), { //ok
+    const ourmap = new google.maps.Map(document.getElementById("map"), { 
       zoom: 14,
       center: garden,
     });
@@ -165,7 +165,7 @@ function initMap() { //ok
 
         gmarkers1.push(marker);
         */
-        }     //for ok    
+        //}     //for ok    
     });// get ok
     
  } //ok function
