@@ -134,16 +134,17 @@ function initMap() {
           content: contentString,
         });
 
-        infoWindows.push(infowindow);
 
         marker.addListener("click", () => {        
             //openInfoWindow(infowindow, map, marker);
             //document.getElementsByClassName("locPopUp").style.visibility = "hidden";
-            for(var j = 0; j < infoWindows.length; j++){
-                InfoWindows[j].close();
-            }
+            //for(var j = 0; j < infoWindows.length; j++){
+            //    InfoWindows[j].close();
+            //}
             infowindow.open(map, marker);
         });
+        
+        infoWindows.push(infowindow);
 
         gmarkers1.push(marker);
         
