@@ -135,17 +135,19 @@ function initMap() {
           "<p><a style='color:blue; text-decoration: underline;' href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
           "</div>" +
           "</div>";
+        
         const infowindow = new google.maps.InfoWindow({
           content: contentString,
         });
 
 
         marker.addListener("click", () => {        
-           
+            infoWindow.setContent(this.position);
+
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
             }
-            infowindow.open(map, marker);
+            infowindow.open(map, this);
         });
         
         infoWindows.push(infowindow);
