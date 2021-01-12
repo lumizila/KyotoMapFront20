@@ -138,14 +138,13 @@ function initMap() {
         
         const infowindow = new google.maps.InfoWindow({
           content: contentString,
-        });
+        });     
 
-        infowindow.setPosition(marker.position);
-
-        marker.addListener("click", () => {                 
+        marker.addListener("click", () => {      
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
             }
+            infowindow.setPosition(marker.position);
             infowindow.open(map, marker);
         });
         
