@@ -110,13 +110,13 @@ function initMap() { //ok
 
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
       
-      for (var i = 0; i<locations.length; i++){
-        /*
+      for (var i = 0; i< locations.length; i++){
+        
         //parsing lat and lon
         var t_lat=parseFloat(locations[i].lon);
         var t_lng=parseFloat(locations[i].lat);
 
-        const location=locations[i];
+        const location = locations[i];
         const marker = new google.maps.Marker({ 
           position: {lat:t_lat,lng:t_lng},
           map: ourmap,
@@ -162,9 +162,9 @@ function initMap() { //ok
         }); //ok
         
         infoWindows.push(infowindow);
-
-        gmarkers1.push(marker);
         */
+        gmarkers1.push(marker);
+        
         }     //for ok    
     });// get ok
     
