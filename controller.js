@@ -136,7 +136,7 @@ function initMap() { //ok
                  '</div>' +
             '</div>'; 
         } //ok
-        /*
+        */
          contentString = contentString +
           '</div>' +
           '<div id="">' +
@@ -160,7 +160,7 @@ function initMap() { //ok
         }); //ok
         
         infoWindows.push(infowindow);
-        */
+        
         gmarkers1.push(marker);
         
         }     //for ok    
