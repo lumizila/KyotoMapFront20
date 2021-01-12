@@ -124,8 +124,8 @@ function initMap() {
           icon: image
         });
 
-        var imagesHtml = getImagesHtml(location.pid);
-        alert(imagesHtml);
+        //var imagesHtml = getImagesHtml(location.pid);
+        //alert(imagesHtml);
 
         const contentString =
           '<div id="" class="">' +
@@ -174,7 +174,7 @@ function initMap() {
         
         };         
     });
-  }
+ }
 
 /*
     Function to create the images html to insert on infowindow
