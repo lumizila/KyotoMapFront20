@@ -140,7 +140,7 @@ function initMap() {
           content: contentString,
         });
 
-        infoWindow.setPosition(marker.position);
+        infowindow.setPosition(marker.position);
 
         marker.addListener("click", () => {                 
             for(var j = 0; j < infoWindows.length; j++){
