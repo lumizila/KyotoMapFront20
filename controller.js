@@ -94,7 +94,7 @@ var gmarkers1 = [];
 var infoWindows = [];
 
 function initMap() { //ok
-/*    const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
+   const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
     const ourmap = new google.maps.Map(document.getElementById("map"), { //ok
       zoom: 14,
       center: garden,
@@ -105,10 +105,10 @@ function initMap() { //ok
                 infoWindows[j].close();
         }
     });
-
+    
     $.get('https://kyoto-map-20.herokuapp.com/locations/',function(locations,status){
 
-      const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+      /*const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
       
       for (var i=0;i<locations.length;i++){
 
@@ -165,9 +165,9 @@ function initMap() { //ok
 
         gmarkers1.push(marker);
         
-        };     //for ok    
+        };*/     //for ok    
     });// get ok
-    */
+    
  } //ok function
 
   /**
