@@ -93,14 +93,14 @@ $("#filterCategory").click(function(){
 var gmarkers1 = [];
 var infoWindows = [];
 
-function initMap() {
+function initMap() { //ok
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
-    const ourmap = new google.maps.Map(document.getElementById("map"), {
+    const ourmap = new google.maps.Map(document.getElementById("map"), { //ok
       zoom: 14,
       center: garden,
     });
 
-    ourmap.addListener('click', function() {
+    ourmap.addListener('click', function() { //ok
         for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
         }
@@ -117,60 +117,57 @@ function initMap() {
         var t_lng=parseFloat(locations[i].lat);
 
         const location=locations[i];
-        const marker = new google.maps.Marker({
+        const marker = new google.maps.Marker({ //ok
           position: {lat:t_lat,lng:t_lng},
           map: ourmap,
           category: location.category,
           icon: image
-        });
+        }); //ok
 
         
 
-        var contentString =
-          '<div id="" class="">' +
-          '<div id="">' +
-          "</div>" +
+        var contentString = '<div id="" class="">' +
           '<h1 id="">'+location.pname+'</h1>' +         
           '<div class="row">';
 
-        for (var i=0;i<location.imageUrls.length;i++){
+        for (var i=0;i<location.imageUrls.length;i++){ //ok
             contentString = contentString +
             '<div class="col-md-4">'+
                  '<div class="thumbnail">'+
                  '<img src="'+location.imageUrls[i]+'" style="width:100%" class="img-rounded" alt="image1">'+             
                  '</div>' +
             '</div>'; 
-        }
+        } //ok
         
          contentString = contentString +
           '</div>' +
           '<div id="">' +
           "<p></p>"+
           "<p>"+ location.description+"</p>"+
-          "<p><a style='color:blue; text-decoration: underline;' href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
+          "<p><a style='color:blue; text-decoration: underline;' href="+location.webUrl+">Press here to read more about "+location.pname+"</a></p>"+
           "</div>" +
           "</div>";
         
-        const contents = contentString;
+        //const contents = contentString;
         const infowindow = new google.maps.InfoWindow({
-          content: contents,
-        });     
+          content: contentString,
+        });  //ok   
 
         google.maps.event.addListener(marker, "click", function (event) {
             for(var j = 0; j < infoWindows.length; j++){
                 infoWindows[j].close();
-            }
+            } //ok
             infowindow.setPosition(marker.position);
             infowindow.open(map, marker);
-        });
+        }); //ok
         
         infoWindows.push(infowindow);
 
         gmarkers1.push(marker);
         
-        };         
-    });
- }
+        };     //for ok    
+    });// get ok
+ } //ok function
 
   /**
  * Function to hide markers
