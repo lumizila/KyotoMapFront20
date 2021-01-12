@@ -106,20 +106,25 @@ function initMap() {
         }
     });
 
-    $.get('https://kyoto-map-20.herokuapp.com/locations/',function(data,status){
+    $.get('https://kyoto-map-20.herokuapp.com/locations/',function(locations,status){
 
-      var locations=new Array();
-      for (var i=0;i<data.length;i++){
+      //var locations=new Array();
+      /*for (var i=0;i<data.length;i++){
         var t_lat=parseFloat(data[i].lon);
         var t_lng=parseFloat(data[i].lat);
         locations.push({lat:t_lat, lng:t_lng, description:data[i].description, name:data[i].pname, category:data[i].category, webUrl:data[i].webUrl});
-      }
+      }*/
       const image ="https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
       
       for (var i=0;i<locations.length;i++){
+
+        //parsing lat and lon
+        var t_lat=parseFloat(locations[i].lon);
+        var t_lng=parseFloat(locations[i].lat);
+
         const location=locations[i];
         const marker = new google.maps.Marker({
-          position: {lat:location.lat,lng:location.lng},
+          position: {lat:t_lat,lng:t_lng},
           map: ourmap,
           category: location.category,
           icon: image
@@ -129,7 +134,7 @@ function initMap() {
           '<div id="" class="">' +
           '<div id="">' +
           "</div>" +
-          '<h1 id="">'+location.name+'</h1>' +         
+          '<h1 id="">'+location.pname+'</h1>' +         
           '<div class="row">'+
             '<div class="col-md-4">'+
                  '<div class="thumbnail">'+
