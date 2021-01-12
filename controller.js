@@ -124,12 +124,12 @@ function initMap() { //ok
           icon: image
         }); 
 
-        /*
+        
 
         var contentString = '<div id="" class="">' +
           '<h1 id="">'+location.pname+'</h1>' +         
           '<div class="row">';
-
+        /*
         for (var i=0;i<location.imageUrls.length;i++){ //ok
             contentString = contentString +
             '<div class="col-md-4">'+
