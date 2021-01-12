@@ -128,7 +128,7 @@ function initMap() { //ok
           '<h1 id="">'+location.pname+'</h1>' +         
           '<div class="row">';
         
-        for (var i = 0; i<location.imageUrls.length; i++){ 
+        for (var k = 0; k<location.imageUrls.length; k++){ 
             /*contentString = contentString +
             '<div class="col-md-4">'+
                  '<div class="thumbnail">'+
