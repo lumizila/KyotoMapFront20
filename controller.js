@@ -91,7 +91,7 @@ $("#filterCategory").click(function(){
 }); 
 
 var gmarkers1 = [];
-var infoWindows = [];
+//var infoWindows = [];
 
 function initMap() {
     const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
@@ -126,7 +126,7 @@ function initMap() {
           "</div>" +
           '<h1 id="">blabla'+location.name+'</h1>' +
           '<div id="">' +
-          "<p>"+ location.description+"</p>"
+          "<p>"+ location.description+"</p>"+
           "<p><a href="+location.webUrl+">Press here to read more about "+location.name+"</a></p>"+
           "</div>" +
           "</div>";
@@ -144,7 +144,7 @@ function initMap() {
             infowindow.open(map, marker);
         });
         
-        infoWindows.push(infowindow);
+        //infoWindows.push(infowindow);
 
         gmarkers1.push(marker);
         
