@@ -12,92 +12,87 @@
 <body>
 <div class="jumbotron" id="jumbotron">
 </div>
-<div class="wrapper">
 
- <nav id="sidebar">	
+<div class="container webbackground">
+	<div class ="row">
+		<div id= "sidebar-container" class = "col-2">
+			 <nav id="sidebar">
 
-
-  	 <ul class="lisst-unstyled components">
-		<li class="active">
- 	 		<a href="#categoriesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Categories</a>
- 	 	  	<ul class="collapse list-unstyled" id="categoriesSubmenu">
-				
-				<form class="form-horizontal">
-					<div class="form-group">   
-						<div class="col-sm-offset-2 col-sm-10">
-							<div class="checkbox">
-							  <label><input id="nature" type="checkbox" name="remember"> Nature </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="temples" type="checkbox" name="remember"> Temples </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="shrines" type="checkbox" name="remember"> Shrines </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="castles" type="checkbox" name="remember"> Palace and Castles </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="museums" type="checkbox" name="remember"> Museums </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="sightseeing" type="checkbox" name="remember"> Sightseeing </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="resandbars" type="checkbox" name="remember"> Restaurant & Bars </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="hospitals" type="checkbox" name="remember"> Hospital </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="shopping" type="checkbox" name="remember"> Shopping </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="stations" type="checkbox" name="remember"> Stations </label>
-							</div>
-							<div class="checkbox">
-							  <label><input id="others" type="checkbox" name="remember"> Others </label>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">        
-					  <div class="col-sm-offset-2 col-sm-10">
-						<button type="button"  id="filterCategory" class="btn btn-danger">Filter</button>
-					  </div>
-					</div>
-				 </form>
+  				 <ul class="components">
+					<li class="active" style="list-style-type: none;">
+ 	 					<!--<a href="#categoriesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Categories</a>-->
+ 	 					<h3 class="" style="">Categories</h3>
+ 	 	  				<!--<ul class="collapse list-unstyled" id="categoriesSubmenu">-->
+						<ul class="" id="categoriesSubmenu">	
+							<form class="form-horizontal">
+								<div class="form-group">   
+									<div class="col-sm-offset-2 col-sm-10">
+										<div class="checkbox">
+										  <label><input id="nature" type="checkbox" name="remember"> Nature </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="temples" type="checkbox" name="remember"> Temples </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="shrines" type="checkbox" name="remember"> Shrines </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="castles" type="checkbox" name="remember"> Palace and Castles </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="museums" type="checkbox" name="remember"> Museums </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="sightseeing" type="checkbox" name="remember"> Sightseeing </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="resandbars" type="checkbox" name="remember"> Restaurant & Bars </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="hospitals" type="checkbox" name="remember"> Hospital </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="shopping" type="checkbox" name="remember"> Shopping </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="stations" type="checkbox" name="remember"> Stations </label>
+										</div>
+										<div class="checkbox">
+										  <label><input id="others" type="checkbox" name="remember"> Others </label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">        
+								  <div class="col-sm-offset-2 col-sm-10">
+									<button type="button"  id="filterCategory" class="btn btn-danger">Filter</button>
+								  </div>
+								</div>
+							 </form>
 		
-			</ul>
-		</li>
+						</ul>
+					</li>
  	 			
-		<li class="active">
-			<a href="#routeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="background-image: url(images/menu-bg.png);">Route</a>
-			<ul class="collapse list-unstyled" id="routeSubmenu" >
-				<div class="form-group">
-					<label for="frm" style="padding-left:10px;">From:</label><br>
-					<input type="text" id="frm" name="from" size="15">
-				  </div>
-				  <div class="form-group">
-					<label for="to" style="padding-left:10px">To</label><br>
-					<input type="text" id="to" name="to" size="15">
-				  </div>
-				  <button type="button" id="searchRoute" class="btn btn-danger" style="margin-left: 10px;">Search</button>
-			</ul>
-  		</li>
-		  	 	
- 	 	
-	 </ul>
- </nav>
+					<li style="list-style-type: none;">
+					  <h4>Get a route recommendation (TODO)</h4>
+					</li>
+ 	 				<li style="list-style-type: none;">
+					  <h4>See Kyoto related news (TODO)</h4>
+					</li>
+				 </ul>
+			 </nav>
+		</div>
+		<div  id="map-container" class="col-10">
+			<div class="container-fluid" id="map" >
+			</div>
+			<script 
+				defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqcGUGCfHIqX1IvjHx_ul26MRvdr_3T8Y&callback=initMap&libraries=&v=weekly">
+			</script>	
+		</div>
 
-<div id="content">
-<div class="container-fluid" id="map" ></div>
-	<script 
-		defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqcGUGCfHIqX1IvjHx_ul26MRvdr_3T8Y&callback=initMap&libraries=&v=weekly">
-	</script>	
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </body>
 </html>

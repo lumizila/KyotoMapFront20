@@ -1,9 +1,4 @@
-#tyaExample{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
+
 
 body{
 	font-family: 'Poppins', sans-serif;
@@ -35,34 +30,47 @@ a:focus{
 /* Side Bar*/
 #sidebar.active {
 	margin-left: -200px;
-	background: url(images/menu-bg.png);
+	/*background: url(images/menu-bg.png);*/
+}
+
+.webbackground{
+		background-color:  #F77D64;
+		max-width: 100%;
 }
 
 .wrapper{
-	display: flex;
+	/*display: flex;*/
 	text-decoration: none;
 	transition: all 0.3s;
+	background-color:  #F77D64;
 }
 
 #sidebar{
 	min-width: 200px;
-	max-width: 230px;
-	background: url(images/menu-bg.png);
-	color: rgb(110, 27, 27);
-	transition: all 0.3s;
+	padding-right:0px;
+	/*max-width: 230px;*/
+	/*background: url(images/menu-bg.png);*/
+	background-color: #660000;
+	/*transition: all 0.3s;*/
 }
 
 #sidebar ul.components{
-	padding: 20px 0;
-	border-bottom: 1px solid #91796a;
-	background: url(images/menu-bg.png);
+	/*padding: 20px 0;*/
+	padding-left: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 
+
+	/*border-bottom: 1px solid #91796a;*/
+	/*background: url(images/menu-bg.png);*/
+	/*background-color: #F77D64;*/
+	color:  #F77D64;
 }
 
 #sidebar ul p{
 	color: #fff;
 	padding: 10px;
-	background: url(images/menu-bg.png);
+	/*background: url(images/menu-bg.png);*/
 
 }
 
@@ -70,7 +78,7 @@ a:focus{
 	padding: 10px;
 	font-size: 1.1em;
 	display: block;
-	background: url(images/menu-bg.png);
+	/*background: url(images/menu-bg.png);*/
 
 }
 
@@ -80,7 +88,9 @@ a:focus{
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-background: url(images/menu-bg.png);
+	color: #F77D64;
+	
+/*background: url(images/menu-bg.png);*/
 }
 
 a[data-toggle="collapse"]{
@@ -119,15 +129,22 @@ ul ul a{
 	padding: 0;
 }
 
+#map-container{
+		padding-left:0px;
+}
 #map
 {
+	max-width: 100%;
 	height: 700px;
-	width: 1150px;
+	/*width: 1150px;*/
 	position: relative;
 	box-shadow: 5px 10px 10px #292828;
 	z-index: 22;
 }
 
+#sidebar-container{
+	padding-right:0px;
+}
 
 @media (max-width: 768px) {
     #sidebar {
@@ -137,3 +154,7 @@ ul ul a{
         margin-left: 0;
     }
   }
+
+body{
+	background-color:  #F77D64;
+}
