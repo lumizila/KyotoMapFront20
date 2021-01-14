@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+$("#seeNews").click(function(){
+    window.open("https://www.japantimes.co.jp/tag/kyoto/");
+});
 
 $("#filterCategory").click(function(){
 
