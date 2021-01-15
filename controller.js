@@ -11,8 +11,8 @@ $("#getRecommendationRoute").click(function(){
   var directionsRenderer = new google.maps.DirectionsRenderer();
 
       var request = {
-        origin: { lat: 35.023138536118545, lng: 135.76386160876868 },
-        destination: { lat: 35.023138536118545, lng: 135.76386160876868 },
+        origin: { lat: 135.758175895727, lng: 34.985260235 },
+        destination: { lat: 135.780959058275, lng: 34.99617 },
         travelMode: 'WALKING'
       };
       directionsService.route(request, function(result, status) {
