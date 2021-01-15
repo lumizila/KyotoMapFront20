@@ -23,7 +23,7 @@ $("#getRecommendationRoute").click(function(){
 
   directionsRenderer.setMap(ourmap);    
 
-}
+});
 
 $("#filterCategory").click(function(){
 
