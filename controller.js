@@ -1,8 +1,29 @@
+const ourmap;
+
 $(document).ready(function(){
 
 $("#seeNews").click(function(){
     window.open("https://www.japantimes.co.jp/tag/kyoto/");
 });
+
+$("#getRecommendationRoute").click(function(){
+  var directionsService = new google.maps.DirectionsService();
+  var directionsRenderer = new google.maps.DirectionsRenderer();
+
+      var request = {
+        origin: { lat: 35.023138536118545, lng: 135.76386160876868 },
+        destination: { lat: 35.023138536118545, lng: 135.76386160876868 },
+        travelMode: 'WALKING'
+      };
+      directionsService.route(request, function(result, status) {
+        if (status == 'OK') {
+          directionsRenderer.setDirections(result);
+        }
+      });
+
+  directionsRenderer.setMap(ourmap);    
+
+}
 
 $("#filterCategory").click(function(){
 
@@ -86,7 +107,7 @@ var gmarkers1 = [];
 var infoWindows = [];
 
 function initMap() { //ok
-   const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
+    const garden = { lat: 35.023138536118545, lng: 135.76386160876868 };
     const ourmap = new google.maps.Map(document.getElementById("map"), { 
       zoom: 14,
       center: garden,
