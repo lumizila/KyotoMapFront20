@@ -11,10 +11,11 @@ $("#getRecommendationRoute").click(function(){
   var directionsRenderer = new google.maps.DirectionsRenderer();
 
        directionsRenderer.setMap(ourmap);    
-
+       var start =  new google.maps.LatLng({lat: 135.758175895727, lng: 34.985260235});
+       var end = new google.maps.LatLng({lat: 135.780959058275, lng: 34.99617});
         var request = {
-        origin: { lat: 135.758175895727, lng: 34.985260235 },
-        destination: { lat: 135.780959058275, lng: 34.99617 },
+        origin: start,
+        destination: end,
         travelMode: 'WALKING'
       };
       directionsService.route(request, function(result, status) {
