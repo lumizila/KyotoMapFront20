@@ -10,7 +10,9 @@ $("#getRecommendationRoute").click(function(){
   var directionsService = new google.maps.DirectionsService();
   var directionsRenderer = new google.maps.DirectionsRenderer();
 
-      var request = {
+       directionsRenderer.setMap(ourmap);    
+
+        var request = {
         origin: { lat: 135.758175895727, lng: 34.985260235 },
         destination: { lat: 135.780959058275, lng: 34.99617 },
         travelMode: 'WALKING'
@@ -20,8 +22,6 @@ $("#getRecommendationRoute").click(function(){
           directionsRenderer.setDirections(result);
         }
       });
-
-  directionsRenderer.setMap(ourmap);    
 
 });
 
