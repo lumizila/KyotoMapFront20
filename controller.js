@@ -27,7 +27,7 @@ $("#getRecommendationRoute").click(function(){
 });
 
 $("#chat").click(function(){
-    window.open("https://imgur.com/a/0UlnINr");
+    window.open("https://i.imgur.com/jbrnQir.png");
 });
 
 $("#filterCategory").click(function(){
