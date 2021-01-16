@@ -133,6 +133,31 @@ a[aria-expanded="true"] {
 	color: white;
 }
 
+
+#uploadPic{
+	background-color: #FF9999;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+
+}
+#uploadPic:hover{
+	background-color: #FF6666;
+	color: white;
+}
+
+#chat{
+	background-color: #FF9999;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+
+}
+#chat:hover{
+	background-color: #FF6666;
+	color: white;
+}
+
 #filterCategory{
 	background-color:  #FF9999;
 	color: black;
