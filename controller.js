@@ -27,7 +27,7 @@ $("#getRecommendationRoute").click(function(){
 });
 
 $("#chat").click(function(){
-    window.open("https://kyoto-map-20.herokuapp.com/chatSystem.png");
+    window.open("https://imgur.com/a/0UlnINr");
 });
 
 $("#filterCategory").click(function(){
