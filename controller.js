@@ -159,7 +159,7 @@ function initMap() { //ok
         contentString = contentString +  '<div class="row">';   
 
         for (var k = 0; k<location.imageUrls.length; k++){ 
-            if(location.imageUrls[k] != NULL && location.imageUrls[k] != ""){
+            if(location.imageUrls[k] != null && location.imageUrls[k] != ""){
                 contentString = contentString +
                 '<div class="col-md-4">'+
                      '<div class="thumbnail">'+
