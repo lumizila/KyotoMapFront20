@@ -163,7 +163,7 @@ function initMap() { //ok
                 contentString = contentString +
                 '<div class="col-md-4">'+
                      '<div class="thumbnail">'+
-                     '<img src="'+location.imageUrls[k]+'" style="width:100%" class="img-rounded" alt="image1">'+             
+                     '<img src="'+location.imageUrls[k]+'" style="width:200px;height:150px;" class="img-rounded" alt="image1">'+             
                      '</div>' +
                 '</div>'; 
             }
